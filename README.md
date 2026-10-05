@@ -224,3 +224,35 @@ After completing this practical, students will be able to:
 * Represent many-to-many relationships.
 * Understand one-to-one, one-to-many and many-to-many cardinalities.
 * Export an EER model as a visual diagram.
+                 ┌──────────────┐
+                 │  DEPARTMENT  │
+                 │ DepartmentID │
+                 │ DepartmentName│
+                 └──────┬───────┘
+                        │ 1
+                        │
+                        │ M
+                 ┌──────▼───────┐
+                 │   STUDENT    │
+                 │ StudentID    │
+                 │ StudentName  │
+                 │ DepartmentID │
+                 └──────┬───────┘
+                        │
+                     M  │  M
+                        │
+                 ┌──────▼───────┐
+                 │   COURSE     │
+                 │ CourseID     │
+                 │ CourseName   │
+                 │ FacultyID    │
+                 └──────▲───────┘
+                        │ M
+                        │
+                        │ 1
+                 ┌──────┴───────┐
+                 │   FACULTY    │
+                 │ FacultyID    │
+                 │ FacultyName  │
+                 │ DepartmentID │
+                 └──────────────┘
